@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('img/john-towner-JgOeRuGD_Y4-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/*HEADER*/
+
+/*CONTENIDO*/
+
+.container-title-img{
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+	justify-content: center;
+    display: flex;
+    margin-top: 0;
+}
+
+.container-title-img h1{
+    font-size: 70px;
+    color: white;
+    margin-left: 20rem;
+}
+.container-title-img h2{
+    font-size: 25px;
+    color: white;
+    margin-left: 20rem;
+}
+
+/*NAV*/
+
+.container-header nav {
+    float: left;
+    background-color: rgba(128, 128, 128, 0.281);
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    justify-content: right;
+    align-items: center;
+    height: 110px;
+}
+
+.container-header-nav-div {
+    justify-content: left;
+    align-items: left;
+    width: 30%;
+    margin-left: 5rem;
+}
+
+.container-header-nav-logo {
+    height: 80px;
+    transition: 0.5s;
+}
+
+.container-header-nav-logo:hover {
+    background-color: grey;
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
+}
+
+.container-header nav ul {
+    list-style: none;
+    margin-right: 22rem;
+}
+
+.container-header nav ul li{
+    display: inline-block;
+    padding: 20px;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.container-header nav ul li:hover{
+    background-color: grey;
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
+}
+
+.container-header nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.first-section {
+    height: 500px;
+    background: rgb(0, 0, 0, 0.700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 200px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.first-section div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.first-section div h1{
+    font-size: 40px;
+    padding-bottom: 1rem;
+}
+
+.first-section div p{
+    font-size: 23px;
+}
+
+.first-section img {
+    height: 400px;
+    width: 300px;
+}
+
+.second-section {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 200px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.700);
+    width: 100%;
+}
+
+.second-section div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.second-section div h1{
+    font-size: 40px;
+    padding-bottom: 1rem;
+}
+
+.second-section div p{
+    font-size: 23px;
+}
+
+.second-section img {
+    height: 400px;
+    width: 300px;
+}
+
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.247);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 5rem;
+}

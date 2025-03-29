@@ -1,0 +1,88 @@
+---
+import '../styles/header.css';
+---
+
+<header class="header-container" id="home">
+    <nav class="nav-first">
+        <h1>NICOPORT</h1>
+        <!-- Icono de menú hamburguesa -->
+        <div class="nav-toggle" id="nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#section-skill">Skills</a></li>
+            <li><a href="#section-proyect">Projects</a></li>
+            <li><a href="#section-certificates">Certificates</a></li>
+            <div style="padding: 1rem;">
+                <a href="https://www.linkedin.com/in/nicol%C3%A1s-adri%C3%A1n-bernal-berm%C3%BAdez-666a35282/" target="_blank" class="header-btn-a">
+                    <button class="header-btn-linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </button>
+                </a>
+            </div>
+            <div style="padding: 1rem;">
+                <a href="https://github.com/nicolasbb06" target="_blank" class="header-btn-a">
+                    <button class="header-btn-github">
+                        <i class="fa-brands fa-github"></i>
+                    </button>
+                </a>
+            </div>
+            <div style="padding: 1rem;">
+                <a href="mailto:nicolasbernalbermudez@gmail.com" target="_blank" class="header-btn-a">
+                    <button class="contact-btn-gmail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </button>
+                </a>
+            </div>
+        </ul>
+    </nav>
+    <div class="header-content">
+        <div class="header-content-background">
+            <div class="header-titles">
+                <h1 class="header-h1"><span class="header-h1-letter">Hi!</span> I'm Nicolás Bernal Bermúdez</h1>
+                <p>
+                    Currently, I am studying a Higher Degree in Multiplatform Application Development (DAM).
+                    My intention is to obtain a B2 degree in English, study German and obtain a Higher Degree in Web Application Development (DAW).
+                </p>
+            </div>
+            <div class="header-btn">
+                <div style="padding: 1rem;">
+                    <a href="/Certificados/Curriculum_nicolas_bernal_bermudez.pdf" target="_blank">
+                        <button class="header-btn-cv">Download CV
+                            <i class="fa-solid fa-download"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav a");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", function (this: HTMLElement) {
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                this.classList.add("active");
+            });
+        }); 
+    });
+
+    window.addEventListener("scroll", function () {
+        var nav = document.querySelector("nav");
+        nav?.classList.toggle("scroll", window.scrollY > 0);
+    });
+
+    // Activar el menú hamburguesa
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    navToggle?.addEventListener('click', () => {
+        navLinks?.classList.toggle('active');
+    });
+</script>

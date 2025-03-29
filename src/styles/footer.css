@@ -1,0 +1,89 @@
+/**********FOOTER**********/
+
+.footer-container {
+    background: #121212;
+    
+    text-align: center;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: grey;
+}
+
+/* Redes Sociales */
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-socials a {
+    text-decoration: none;
+}
+
+.footer-btn-linkedin,
+.footer-btn-github,
+.footer-btn-gmail {
+    background: transparent;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.footer-btn-linkedin:hover,
+.footer-btn-github:hover,
+.footer-btn-gmail:hover {
+    cursor: pointer;
+    background: black;
+    animation: bordeParpadeo 3s linear infinite;
+}
+
+/* Contacto */
+.footer-contact p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contact a:hover {
+    color: grey;
+}
+
+/* Animación */
+@keyframes bordeParpadeo {
+    0% { border-color: rgb(255, 255, 255); }
+    50% { border-color: rgba(255, 255, 255, 0); }
+    100% { border-color: rgb(255, 255, 255); }
+}

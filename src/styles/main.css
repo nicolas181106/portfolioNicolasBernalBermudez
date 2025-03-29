@@ -1,0 +1,275 @@
+	/**GENERAL**/
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	h1,
+	h2 {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 700;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	.div-space {
+		padding: 28px;
+		width: 100%;
+	}
+
+	.main-container {
+		box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+		box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+	}
+
+	/****Section skills****/
+
+	.section-skill {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.section-skill-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5rem;
+		margin-left: 10rem;
+		margin-right: 10rem;
+		background: rgb(22, 22, 22);
+		box-shadow: 0rem 0rem 2rem 0rem hsla(0, 0%, 100%, 0.25);
+		animation: parpadeo 5s ease infinite;
+	}
+
+	@keyframes parpadeo {
+		0% {
+			box-shadow: 0rem 0rem 2rem 0rem hsla(0, 0%, 100%, 0.15);
+		}
+
+		50% {
+			box-shadow: 0rem 0rem 3rem 0rem hsla(0, 0%, 100%, 0.35);
+		}
+
+		100% {
+			box-shadow: 0rem 0rem 2rem 0rem hsla(0, 0%, 100%, 0.15);
+		}
+	}
+
+	.section-skill-content {
+		margin: 4rem;
+	}
+
+	.section-skill-content h3 {
+		font-size: 40px;
+		color: white;
+		text-align: center;
+	}
+
+	.p-generic-text-skills {
+		color: rgb(200, 200, 200);
+		font-size: 20px;
+		text-align: center;
+		margin-top: 1rem;
+		margin-bottom: 4rem;
+		margin-left: 20rem;
+		margin-right: 20rem;
+	}
+
+	.skill-card {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.cards-skill {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: white;
+		padding: 1rem;
+		border-radius: 1.5rem;
+		box-shadow: 0px 0px 15px #ffffff29;
+		transition: 0.3s ease;
+		width: 150px;
+		height: auto;
+	}
+
+	.cards-skill:hover {
+		transform: scale(1.15);
+	}
+
+	.skill-card-img img {
+		width: 100%;
+		height: 100px;
+		object-fit: cover;
+		border-radius: 1.5rem;
+	}
+
+	.skill-card-description {
+		margin-top: 1rem;
+		text-align: center;
+	}
+
+	.skill-card-description p {
+		font-size: 1rem;
+		color: #333;
+	}
+
+	/****Section proyects****/
+
+	.section-proyect {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgb(0, 0, 0);
+		padding: 4rem;
+		height: 100vh;
+		box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+	}
+
+	.section-proyect-content h3 {
+		font-size: 40px;
+		color: white;
+		text-align: center;
+	}
+
+	.p-generic-text-proyect {
+		color: rgb(200, 200, 200);
+		font-size: 20px;
+		text-align: center;
+		margin-top: 1rem;
+		margin-bottom: 4rem;
+		margin-left: 30rem;
+		margin-right: 30rem;
+	}
+
+	.proyect-card {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.cards-proyect {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: white;
+		padding: 1rem;
+		border-radius: 1.5rem;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		width: 250px;
+		height: auto;
+	}
+
+	.cards-proyect:hover {
+		transform: scale(1.05);
+		box-shadow: 0 1.5rem 5rem -1rem hsla(0, 0%, 0%, 0.3);
+	}
+
+	.proyect-card-img a img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 1.5rem;
+		border: 1px solid #333;
+	}
+
+	.proyect-card-description {
+		margin-top: 1rem;
+		text-align: center;
+		justify-content: center;
+		display: flex;
+		gap: 0.5rem;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.proyect-card-a {
+		text-decoration: none;
+	}
+
+	.proyect-card-a div:hover {
+		background: black;
+	}
+
+	.proyect-card-description div {
+		background-color: #333;
+		border-radius: 0.8rem;
+		padding: 0.5rem;
+		color: white;
+	}
+
+	/**Section certificates**/
+
+	.section-certificates {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgb(46, 46, 46);
+		box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+		padding: 4rem;
+		height: 100vh;
+	}
+
+	.section-certificates-content h3 {
+		font-size: 40px;
+		color: white;
+		text-align: center;
+	}
+
+	.p-generic-text-certificates {
+		color: rgb(200, 200, 200);
+		font-size: 20px;
+		text-align: center;
+		margin-top: 1rem;
+		margin-bottom: 4rem;
+		margin-left: 30rem;
+		margin-right: 30rem;
+	}
+
+	.certificate-card {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.5rem;
+		padding: 2rem;
+	}
+
+	.cards-certificate {
+		background: rgb(30, 30, 30);
+		border-radius: 10px;
+		padding: 1rem;
+		text-align: center;
+		box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		max-width: 300px;
+	}
+
+	.certificate-card-img img {
+		width: 100%;
+		border-radius: 5px;
+	}
+
+	.certificate-card-description p {
+		color: white;
+		font-size: 18px;
+		font-weight: bold;
+		margin-top: 10px;
+	}
+
+	.cards-certificate:hover {
+		transform: scale(1.05);
+		box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.9);
+	}

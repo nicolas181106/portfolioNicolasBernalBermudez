@@ -1,0 +1,260 @@
+/**GENERAL**/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/*******NAV*********/
+
+.nav-first {
+    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: 0.2s ease-in;
+}
+
+.nav-first.scroll {
+    backdrop-filter: blur(5px);
+    border-bottom: 0.1px solid rgba(208, 208, 208, 0.201);
+    background-color: transparent;
+}
+
+.nav-first h1 {
+    margin-left: 16rem;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+	margin-right: 16rem;
+}
+
+.nav-first ul {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    margin-right: 16rem;
+}
+
+.nav-first ul li {
+    padding: 30px;
+    align-items: center;
+    display: flex;
+}
+
+.nav-first ul li a {
+    text-decoration: none;
+    color: #F4F4F4;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-first ul li a:hover {
+    color: #c9c9c9;
+}
+
+.nav-first ul li a.active {
+    color: grey;
+}
+
+/* Estilos para el icono de hamburguesa */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Estilos cuando el menú se despliega */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 1400px) {
+    .nav-first h1 {
+        margin-left: 1rem;
+        font-size: 22px;
+    }
+
+    .nav-first ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #121212;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+        justify-content: space-evenly;
+    }
+
+    .nav-first ul li {
+        padding: 1rem;
+    }
+
+    /* Mostrar el icono hamburguesa */
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Cuando el menú está activo, mostramos los enlaces */
+    .nav-links.active {
+        display: flex;
+		justify-content: end;
+		align-items: end;
+    }
+}
+
+/* HEADER */
+.header-container {
+    background: url('../assets/Img/headerbg2.png') no-repeat center center/cover;
+    animation: movimiento 30s infinite;
+}
+
+@keyframes movimiento {
+    0% {
+        background-position: center center;
+    }
+    50% {
+        background-position: center 100%;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.header-content-background {
+    max-width: 1000px;
+    padding: 5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-titles {
+    margin: 0 auto;
+}
+
+.header-h1-letter {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    font-size: 45px;
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.header-h1 {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.header-titles p {
+    margin-top: 2rem;
+    color: white;
+}
+
+.header-btn {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-btn-cv {
+    background: black;
+    padding: 12px 30px;
+    border-radius: 1.5rem;
+    border: 1px solid black;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.header-btn-cv:hover {
+    background: transparent;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+    animation: bordeParpadeo 3s linear infinite;
+}
+
+@keyframes bordeParpadeo {
+    0% {
+        border-color: rgb(255, 255, 255);
+    }
+
+    50% {
+        border-color: rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        border-color: rgb(255, 255, 255);
+    }
+}
+
+.header-btn-a {
+    text-decoration: none;
+}
+
+.header-btn-linkedin,
+.header-btn-github,
+.contact-btn-gmail {
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-btn-linkedin:hover,
+.header-btn-github:hover,
+.contact-btn-gmail:hover {
+    cursor: pointer;
+    background: black;
+    animation: bordeParpadeo 3s linear infinite;
+}
