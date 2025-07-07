@@ -1,0 +1,79 @@
+---
+import proyecto1 from "../assets/Img/Proyectos/TocadosAyaSevilla.jpg";
+import proyecto2 from "../assets/Img/Proyectos/AgathaGatosPersa.png";
+
+const proyects = [
+    {
+        name: "Tocados Aya Sevilla",
+        img: proyecto1,
+        url: "https://tocadosayasevilla.netlify.app/",
+    },
+    {
+        name: "Agatha Gatos Persa",
+        img: proyecto2,
+        url: "https://agathagatospersa.netlify.app/",
+    },
+];
+---
+
+<section
+    class="flex justify-center items-center bg-neutral-900/50 p-[2rem] md:p-[4rem] min-h-screen py-20 md:py-0"
+    id="section-proyect"
+>
+    <div class="fadeIn">
+        <h3 class="text-[40px] text-white text-center">Projects</h3>
+        <p
+            class="text-white text-[20px] text-center mt-[1rem] mb-[4rem] mx-[1rem] xl:mx-[30rem]"
+        >
+            When I started my career in web development, I did
+            small projects mainly with HTML, CSS and JavaScript, but over time I
+            started implementing new frameworks, like Tailwind CSS or Astro.
+        </p>
+        <div
+            class="flex flex-wrap justify-center items-center gap-[1.5rem] mt-[2rem]"
+        >
+            {
+                proyects.map((proyecto) => (
+                    <article
+                        class="flex flex-col items-center bg-white p-6 rounded-[10px] w-[280px] h-auto transition-all duration-300 hover:scale-110"
+                        style="box-shadow: 0 1.5rem 5rem -1rem hsla(0, 0%, 0%, 0.3);"
+                    >
+                        <div>
+                            <a href={proyecto.url} target="_blank">
+                                <img
+                                    src={
+                                        typeof proyecto.img === "string"
+                                            ? proyecto.img
+                                            : proyecto.img.src
+                                    }
+                                    alt={proyecto.name}
+                                    class="w-[200px] h-[200px] rounded-[1.5rem] border-[1px] border-b-gray-700 object-cover"
+                                />
+                            </a>
+                        </div>
+                        <div class="mt-[1rem] text-center justify-center flex gap-[0.5rem] w-full flex-wrap">
+                            <a
+                                href="#section-skill"
+                                class="decoration-none hover:bg-black text-white bg-gray-500 p-[0.5rem] rounded-[0.5rem] transition-all duration-300"
+                            >
+                                <div>Astro</div>
+                            </a>
+                            <a
+                                href="#section-skill"
+                                class="decoration-none hover:bg-black text-white bg-gray-500 p-[0.5rem] rounded-[0.5rem] transition-all duration-300"
+                            >
+                                <div>TailwindCSS</div>
+                            </a>
+                            <a
+                                href="#section-skill"
+                                class="decoration-none hover:bg-black text-white bg-gray-500 p-[0.5rem] rounded-[0.5rem] transition-all duration-300"
+                            >
+                                <div>JavaScript</div>
+                            </a>
+                        </div>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>

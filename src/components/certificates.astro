@@ -1,0 +1,75 @@
+---
+import html5 from "../assets/Img/Certificados/html5.png";
+import cssmaquetado from "../assets/Img/Certificados/cssmaquetado.png";
+import jsbasic from "../assets/Img/Certificados/jsbasic.png";
+import vsc from "../assets/Img/Certificados/vsc.png";
+import javadesde0 from "../assets/Img/Certificados/javadesde0.png";
+
+const certificates = [
+    {
+        name: "HTML5 y CSS3",
+        logo: html5,
+        url: "Certificados/certificado_curso_de_html5_y_css3.pdf",
+    },
+    {
+        name: "Web Layout with CSS",
+        logo: cssmaquetado,
+        url: "Certificados/certificado_curso_de_maquetación_web_con_css.pdf",
+    },
+    {
+        name: "JavaScript Fundamentals",
+        logo: jsbasic,
+        url: "Certificados/certificado_fundamentos_de_javascript.pdf",
+    },
+    {
+        name: "Visual Studio Code",
+        logo: vsc,
+        url: "Certificados/certificado_aumenta_tu_productividad_con_visual_studio_code.pdf",
+    },
+    {
+        name: "Java from Scratch",
+        logo: javadesde0,
+        url: "Certificados/certificado_java_desde_0__introducción.pdf",
+    },
+];
+---
+
+<section
+    class="flex justify-center items-center p-[2rem] md:p-[4rem] min-h-screen py-20 md:py-0"
+    id="section-certificates"
+>
+    <div class="fadeInRapido">
+        <h3 class="text-[40px] text-white text-center">Certificates</h3>
+        <p
+            class="text-white text-[20px] text-center mx-[1rem] xl:mx-[10rem] mt-[1rem] mb-[4rem]"
+        >
+            I was able to obtain these certificates through OpenWebinars.
+        </p>
+        <div
+            class="flex flex-wrap justify-center items-center gap-[2rem] p-[2rem]"
+        >
+            {
+                certificates.map((certificates) => (
+                    <article
+                        class="bg-neutral-900 p-[1rem] rounded-[10px] text-center transition-all duration-300 hover:scale-105 w-[280px] md:w-[265px]"
+                        style="box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);"
+                    >
+                        <a
+                            href={certificates.url}
+                            target="_blank"
+                        >
+                            <img
+                                src={certificates.logo.src}
+                                alt={certificates.name}
+                                class="w-full rounded-[5px]"
+                            />
+                        </a>
+                        <p class="text-white text-[18px] font-bold mt-[10px]">
+                            {certificates.name}
+                        </p>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>

@@ -1,81 +1,26 @@
 ---
+import Nav from '../components/nav.astro';
 import Footer from '../components/footer.astro';
+import '../styles/global.css';
+import nico from '../assets/Img/nico.jpg';
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es-ES">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="portfolio de nicolás adrián bernal bermúdez">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content={description} />
+		<link rel="icon" href={nico.src} />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<title>PortfolioNABB</title>
+		<title>{title}</title>
 	</head>
 	<body>
+		<Nav />
 		<slot />
 		<Footer />
-		<script>
-			declare var ScrollReveal: any;
-
-			window.onload = function () {
-				if (window.innerWidth > 768) {
-					let script = document.createElement("script");
-					script.src = "https://unpkg.com/scrollreveal";
-					script.onload = () => {
-						setTimeout(() => {
-							ScrollReveal().reveal("section", {
-								delay: 300,
-								duration: 600,
-								reset: true
-							});
-						}, 100);
-					};
-					document.body.appendChild(script);
-				}
-			};
-
-			// Convertimos la NodeList en un array para poder usar el forEach sin conflictos de tipo
-			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-			// Aseguramos que anchor es un HTMLAnchorElement
-			if (anchor instanceof HTMLAnchorElement) {
-				anchor.addEventListener("click", (e: MouseEvent) => {
-				e.preventDefault(); // Prevenir la acción predeterminada (desplazamiento automático)
-
-				const targetId = anchor.getAttribute("href"); // Obtener el atributo href
-
-				if (targetId) {
-					const target = document.querySelector(targetId); // Buscar el objetivo
-
-					if (target) {
-					target.scrollIntoView({ behavior: "smooth" }); // Desplazarse suavemente
-					}
-				}
-				});
-			}
-			});
-
-
-
-		</script>
 	</body>
 </html>
-
-<style>
-	html {
-		scroll-behavior: smooth;
-	}
-
-	body {
-		background: linear-gradient(220.55deg, #171717 0%, #000000 100%);
-		font-family: 'Lato', sans-serif;
-	}
-
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-</style>

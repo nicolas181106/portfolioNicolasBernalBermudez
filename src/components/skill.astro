@@ -1,0 +1,64 @@
+---
+const skills = [
+    {
+        name: "HTML5",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png",
+    },
+    {
+        name: "CSS3",
+        logo: "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0631cc0b-4927-4ecb-8160-5855613b0191/image.png?t=1731569256",
+    },
+    {
+        name: "JavaScript",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png",
+    },
+    {
+        name: "Python",
+        logo: "https://cdn.iconscout.com/icon/free/png-256/free-python-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226051.png?f=webp&w=256",
+    },
+    {
+        name: "Java",
+        logo: "https://blog.desafiolatam.com/wp-content/uploads/2018/05/java-logo.png",
+    },
+];
+---
+
+<section
+    class="flex justify-center items-center p-[2rem] md:p-[4rem] min-h-screen py-20 md:py-0"
+    id="section-skill"
+>
+    <div
+        class="fadeIn"
+    >
+        <div>
+            <h3 class="text-[40px] text-white text-center">Skills</h3>
+            <p
+                class="text-white text-[20px] text-center mt-[1rem] mb-[4rem] mx-[1rem] xl:mx-[30rem]"
+            >
+                Over time, when I became interested in web creation, I began to
+                acquire knowledge mainly of HTML and later CSS. I learned other
+                languages ​on my own, both through my school career in the
+                grades and in the certificate courses in which I was able to
+                polish previous skills.
+            </p>
+        </div>
+        <div
+            class="flex flex-wrap md:flex-row justify-center items-center gap-[1.5rem] mt-[2rem] mx-[4rem]"
+        >
+            {
+                skills.map((skill) => (
+                    <article
+                        class="flex flex-col items-center bg-purple-300 p-4 rounded-[1.5rem] w-[170px] md:w-[100px] lg:w-[150px] h-auto transition-all duration-300 hover:scale-115"
+                        style="box-shadow: 0px 0px 15px #ffffff29;"
+                    >
+                        <img
+                            src={skill.logo}
+                            alt={skill.name}
+                            class="w-[120px] md:w-[50px] lg:w-[100px] h-[120px] md:h-[50px] lg:h-[100px] object-cover"
+                        />
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>

@@ -1,39 +1,47 @@
----
-import '../styles/footer.css';
----
+<footer
+    class="bg-neutral-900 flex flex-col items-center gap-[1rem] text-center text-white border-t border-neutral-700 pt-[2rem] pb-[5rem]"
+>
+    <div>
+        <a class="text-white mt-0 mr-[15px] hover:text-neutral-500 font-bold" href="#home">Home</a>
+        <a class="text-white mt-0 mr-[15px] hover:text-neutral-500 font-bold" href="#section-skill">Skills</a>
+        <a class="text-white mt-0 mr-[15px] hover:text-neutral-500 font-bold" href="#section-proyect">Projects</a>
+        <a class="text-white mt-0 mr-[15px] hover:text-neutral-500 font-bold" href="#section-certificates">Certificates</a>
+    </div>
 
-<footer class="footer-container">
-    <div class="footer-content">
-        <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#section-skill">Skills</a>
-            <a href="#section-proyect">Projects</a>
-            <a href="#section-certificates">Certificates</a>
-        </div>
+    <div class="flex gap-[1rem]">
+        <a
+            href="https://www.linkedin.com/in/nicol%C3%A1s-adri%C3%A1n-bernal-berm%C3%BAdez-666a35282/"
+            target="_blank"
+        >
+            <button class="hover:cursor-pointer hover:bg-black animacionHover bg-transparent border-[1px] border-white text-white p-[15px] text-[18px] rounded-[50%] transition-all duration-300 ease-in-out w-[45px] h-[45px] flex justify-center items-center">
+                <i class="fa-brands fa-linkedin"></i>
+            </button>
+        </a>
 
-        <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/nicol%C3%A1s-adri%C3%A1n-bernal-berm%C3%BAdez-666a35282/" target="_blank" class="footer-btn-a">
-                <button class="footer-btn-linkedin">
-                    <i class="fa-brands fa-linkedin"></i>
-                </button>
-            </a>
+        <a
+            href="https://github.com/nicolas181106"
+            target="_blank"
+        >
+            <button class="hover:cursor-pointer hover:bg-black animacionHover bg-transparent border-[1px] border-white text-white p-[15px] text-[18px] rounded-[50%] transition-all duration-300 ease-in-out w-[45px] h-[45px] flex justify-center items-center">
+                <i class="fa-brands fa-github"></i>
+            </button>
+        </a>
 
-            <a href="https://github.com/nicolasbb06" target="_blank" class="footer-btn-a">
-                <button class="footer-btn-github">
-                    <i class="fa-brands fa-github"></i>
-                </button>
-            </a>
+        <a
+            href="mailto:nicolasbernalbermudez@gmail.com"
+            target="_blank"
+        >
+            <button class="hover:cursor-pointer hover:bg-black animacionHover bg-transparent border-[1px] border-white text-white p-[15px] text-[18px] rounded-[50%] transition-all duration-300 ease-in-out w-[45px] h-[45px] flex justify-center items-center">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+        </a>
+    </div>
 
-            <a href="mailto:nicolasbernalbermudez@gmail.com" target="_blank" class="footer-btn-a">
-                <button class="footer-btn-gmail">
-                    <i class="fa-solid fa-envelope"></i>
-                </button>
-            </a>
-        </div>
-
-        <div class="footer-contact">
-            <p>Email: <a href="mailto:nicolasbernalbermudez@gmail.com">nicolasbernalbermudez@gmail.com</a></p>
-            <p>2025 Nicolás Adrián Bernal Bermúdez</p>
-        </div>
+    <div>
+        <p class="text-[18px] text-neutral-400">
+            Email: <a href="mailto:nicolasbernalbermudez@gmail.com" class="text-white hover:text-neutral-500 font-bold"
+                >nicolasbernalbermudez@gmail.com</a>
+        </p>
+        <p class="text-[18px] text-neutral-400">2025 Nicolás Adrián Bernal Bermúdez</p>
     </div>
 </footer>
