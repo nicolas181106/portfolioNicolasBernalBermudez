@@ -7,48 +7,62 @@ import nico from "../assets/Img/nico.jpg";
 ---
 
 <Layout
-	title="Nicolás Adrían Bernal Bermúdez - Portfolio"
-	description="portfolio de nicolás adrián bernal bermúdez"
+	title="Nicolás Adrían Bernal Bermúdez - Portafolio"
+	description="portafolio de Nicolás Adrían Bernal Bermúdez"
 >
+<!-- bg-[url('../assets/Img/headerBG.png')] bg-cover bg-center bg-no-repeat -->
 	<header
-		class="movimiento-header w-[100%] min-h-screen flex items-center justify-around bg-[url('../assets/Img/headerBG.png')] bg-cover bg-center bg-no-repeat text-center text-white"
+		class="movimiento-header w-[100%] min-h-screen flex items-center justify-around text-center text-white"
 		id="home"
 	>
-		<div class="flex flex-col 2xl:flex-row justify-center items-center mx-0 lg:mx-[250px] w-full h-full p-[2rem] py-[6rem] lg:p-0">
-			<div class="flex flex-col justify-center 2xl:justify-start items-center 2xl:items-start max-w-[1400px] 2xl:w-[70%] h-full gap-5">
-				<h1 class="text-[30px] md:text-[40px] text-center 2xl:text-left">
-					<span
-						class="rounded-full text-[35px] md:text-[45px] p-[0.5rem] md:p-[1rem] border-[1px] border-white text-white font-semibold"
-						>Hi!</span
-					> I'm Nicolás Bernal Bermúdez
-				</h1>
-				<p class="text-white text-[10px] md:text-[20px] text-center 2xl:text-start max-w-[800px]">
-					Currently, I am studying a Higher Degree in Multiplatform
-					Application Development (DAM). My intention is to obtain a B2
-					degree in English, study German and obtain a Higher Degree in
-					Web Application Development (DAW).
-				</p>
-				<a
-					href="/Certificados/Curriculum_nicolas_bernal_bermudez.pdf"
-					target="_blank"
-					class="bg-black px-6 py-2 text-[15px] rounded-[1.5rem] border-[1px] border-black font-bold header-btn-cv transition-all duration-300"
+		<div
+			class="flex flex-col 2xl:flex-row justify-center items-center mx-0 lg:mx-[250px] w-full h-full p-[2rem] py-[6rem] lg:p-0"
+		>
+			<div
+				class="flex flex-col justify-center 2xl:justify-start items-center 2xl:items-start max-w-[1400px] 2xl:w-[70%] h-full gap-5"
+			>
+				<h1 class="text-[30px] md:text-[40px] text-center 2xl:text-left">¡Hola! Soy Nicolás Bernal Bermúdez</h1>
+				<p
+					class="text-white text-[10px] md:text-[40px] text-center 2xl:text-start max-w-[800px] parrafo"
 				>
-					
-					Download CV
-					<i class="fa-solid fa-download"></i>
-				</a>
+					Actualmente estudiando un ciclo formativo de grado
+					superior en desarrollo de aplicaciones multiplataforma
+					(DAM). Tengo conocimientos de HTML, CSS, JavaScript, Java, Astro, TailwindCSS, SQL...
+				</p>
+				<div class="flex flex-col sm:flex-row w-full max-2xl:justify-center gap-4">
+					<a
+						href="/Certificados/Curriculum_nicolas_bernal_bermudez.pdf"
+						target="_blank"
+						class="bg-transparent hover:bg-black px-6 py-2 text-[15px] rounded-[1.5rem] border-[1px] border-white/10 font-bold fondoGuapoHeader transition-all duration-300"
+					>
+						Descargar CV
+						<i class="fa-solid fa-download"></i>
+					</a>
+					<a
+						href="mailto:nicolasbernalbermudez@gmail.com"
+						target="_blank"
+						class="bg-transparent hover:bg-black px-6 py-2 text-[15px] rounded-[1.5rem] border-[1px] border-white/10 font-bold fondoGuapoHeader transition-all duration-300"
+					>
+						Contacto
+						<i class="fa-solid fa-envelope"></i>
+					</a>
+				</div>
 			</div>
-			<div class="flex justify-center 2xl:justify-end items-center w-full 2xl:w-[30%]">
-				<img src={nico.src} alt="Nicolás Adrían Bernal Bermúdez" class="w-[250px] scale-100 2xl:scale-115 2xl:w-[300px] h-[250px] 2xl:h-[300px] rounded-full object-cover mt-20 shadow-2xl shadow-blue-50 hover:shadow-blue-300 transition-all duration-300"/>
+			<div
+				class="flex justify-center 2xl:justify-end items-center w-full 2xl:w-[30%]"
+			>
+				<img
+					src={nico.src}
+					alt="Nicolás Adrían Bernal Bermúdez"
+					class="w-[250px] scale-100 2xl:scale-115 2xl:w-[300px] h-[250px] 2xl:h-[300px] rounded-full object-cover mt-20 shadow-2xl shadow-[#000] hover:shadow-[#68641e8a] transition-all duration-300"
+				/>
 			</div>
 		</div>
 	</header>
 
 	<main>
-
-		<Skills />
 		<Proyects />
+		<Skills />
 		<Certificates />
-
 	</main>
 </Layout>

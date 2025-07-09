@@ -4,6 +4,7 @@ import cssmaquetado from "../assets/Img/Certificados/cssmaquetado.png";
 import jsbasic from "../assets/Img/Certificados/jsbasic.png";
 import vsc from "../assets/Img/Certificados/vsc.png";
 import javadesde0 from "../assets/Img/Certificados/javadesde0.png";
+import tailwindcss from "../assets/Img/Certificados/tailwindcss.png";
 
 const certificates = [
     {
@@ -12,12 +13,12 @@ const certificates = [
         url: "Certificados/certificado_curso_de_html5_y_css3.pdf",
     },
     {
-        name: "Web Layout with CSS",
+        name: "Maquetación web con CSS",
         logo: cssmaquetado,
         url: "Certificados/certificado_curso_de_maquetación_web_con_css.pdf",
     },
     {
-        name: "JavaScript Fundamentals",
+        name: "Fundamentos de JavaScript",
         logo: jsbasic,
         url: "Certificados/certificado_fundamentos_de_javascript.pdf",
     },
@@ -27,32 +28,31 @@ const certificates = [
         url: "Certificados/certificado_aumenta_tu_productividad_con_visual_studio_code.pdf",
     },
     {
-        name: "Java from Scratch",
+        name: "Java desde 0",
         logo: javadesde0,
         url: "Certificados/certificado_java_desde_0__introducción.pdf",
+    },
+    {
+        name: "TailwindCSS",
+        logo: tailwindcss,
+        url: "Certificados/certificado_tailwind_css.pdf",
     },
 ];
 ---
 
 <section
-    class="flex justify-center items-center p-[2rem] md:p-[4rem] min-h-screen py-20 md:py-0"
+    class="flex justify-center items-center p-[2rem] md:p-[4rem] min-h-screen py-20 md:py-0 bg-neutral-900/20"
     id="section-certificates"
 >
-    <div class="fadeInRapido">
-        <h3 class="text-[40px] text-white text-center">Certificates</h3>
-        <p
-            class="text-white text-[20px] text-center mx-[1rem] xl:mx-[10rem] mt-[1rem] mb-[4rem]"
-        >
-            I was able to obtain these certificates through OpenWebinars.
-        </p>
+    <div class="fadeIn">
+        <h1 class="text-[40px] text-white text-center">Certificados</h1>
         <div
-            class="flex flex-wrap justify-center items-center gap-[2rem] p-[2rem]"
+            class="flex flex-nowrap sm:flex-wrap md:flex-row justify-normal sm:justify-center items-center gap-0 sm:gap-[1.5rem] mt-[2rem] mx-0 sm:mx-[4rem] max-w-screen sm:max-w-[1500px] overflow-scroll sm:overflow-visible"
         >
             {
                 certificates.map((certificates) => (
                     <article
-                        class="bg-neutral-900 p-[1rem] rounded-[10px] text-center transition-all duration-300 hover:scale-105 w-[280px] md:w-[265px]"
-                        style="box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);"
+                        class="bg-neutral-900 hover:bg-black border-[0.5px] border-white/10 p-[1rem] my-[1.5rem] sm:my-0 mx-[1.5rem] sm:mx-0 max-sm:flex-grow max-sm:flex-shrink-0 max-sm:basis-auto rounded-[10px] text-center transition-all duration-300 hover:scale-105 w-[280px] md:w-[265px]"
                     >
                         <a
                             href={certificates.url}

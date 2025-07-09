@@ -15,7 +15,7 @@ h2 {
     font-weight: 700;
 }
 
-p {
+.parrafo {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     line-height: 1.6;
@@ -43,6 +43,7 @@ p {
 
 /* Header animacion y fondo */
 .movimiento-header {
+    background: linear-gradient(circle, #171717 0%, #000000 100% );
     animation: movimiento 30s infinite;
 }
 
@@ -61,15 +62,11 @@ p {
 }
 
 /* Boton Header*/
-.header-btn-cv:hover {
-    background: transparent;
-    cursor: pointer;
-    border: 1px solid rgb(255, 255, 255);
-    animation: bordeParpadeo 3s linear infinite;
-}
-
-.animacionHover:hover {
-    animation: bordeParpadeo 3s linear infinite;
+.fondoGuapoHeader:hover {
+    background: linear-gradient(20deg,#000,#68641e8a);
+    box-shadow: #000;
+    border: solid 1px rgb(255, 255, 255);
+    transform: translateY(-5px);
 }
 
 @keyframes bordeParpadeo {
@@ -116,22 +113,33 @@ p {
 /* Skill sección */
 
 .parpadeo {
-    background: rgb(22, 22, 22);
-    box-shadow: 0rem 0rem 2rem 0rem hsla(0, 0%, 100%, 0.25);
+    box-shadow: 0rem 0rem 0.5rem 0rem hsla(0, 0%, 100%, 0.25);
     animation: parpadeo 5s ease infinite;
-    max-width: 1200px;
 }
 
 @keyframes parpadeo {
     0% {
-        box-shadow: 0rem 0rem 2rem 0rem hsla(0, 0%, 100%, 0.15);
+        box-shadow: 0rem 0rem 0.5rem 0rem hsla(0, 0%, 100%, 0.15);
     }
 
     50% {
-        box-shadow: 0rem 0rem 3rem 0rem hsla(0, 0%, 100%, 0.35);
+        box-shadow: 0rem 0rem 1rem 0rem hsla(0, 0%, 100%, 0.35);
     }
 
     100% {
-        box-shadow: 0rem 0rem 2rem 0rem hsla(0, 0%, 100%, 0.15);
+        box-shadow: 0rem 0rem 0.5rem 0rem hsla(0, 0%, 100%, 0.15);
     }
+}
+
+/* Fondo guapo */
+
+.fondoGuapo {
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1.5rem 5rem -1rem hsla(0, 0%, 0%, 0.3);
+}
+
+.fondoGuapo:hover {
+    background: linear-gradient(20deg,#000,#68641e8a);
+    box-shadow: #000;
+    border: solid 1px rgb(255, 255, 255);
 }
