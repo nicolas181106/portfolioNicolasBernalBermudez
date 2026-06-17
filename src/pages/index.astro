@@ -1,68 +1,106 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Skills from "../components/skill.astro";
-import Proyects from "../components/proyects.astro";
+import Projects from "../components/proyects.astro";
 import Certificates from "../components/certificates.astro";
-import nico from "../assets/Img/nico.jpg";
+import { Image } from "astro:assets";
 ---
 
 <Layout
-	title="Nicolás Adrían Bernal Bermúdez - Portafolio"
-	description="portafolio de Nicolás Adrían Bernal Bermúdez"
+  title="Nicolás Adrián Bernal Bermúdez | Desarrollador Multiplataforma"
+  description="Portafolio profesional de Nicolás Adrián Bernal Bermúdez, estudiante de DAM especializado en desarrollo Frontend y Backend."
 >
-<!-- bg-[url('../assets/Img/headerBG.png')] bg-cover bg-center bg-no-repeat -->
-	<header
-		class="movimiento-header w-[100%] min-h-screen flex items-center justify-around text-center text-white"
-		id="home"
-	>
-		<div
-			class="flex flex-col 2xl:flex-row justify-center items-center mx-0 lg:mx-[250px] w-full h-full p-[2rem] py-[6rem] lg:p-0"
-		>
-			<div
-				class="flex flex-col justify-center 2xl:justify-start items-center 2xl:items-start max-w-[1400px] 2xl:w-[70%] h-full gap-5"
-			>
-				<h1 class="text-[30px] md:text-[40px] text-center 2xl:text-left">¡Hola! Soy Nicolás Bernal Bermúdez</h1>
-				<p
-					class="text-white text-[10px] md:text-[40px] text-center 2xl:text-start max-w-[800px] parrafo"
-				>
-					Actualmente estudiando un ciclo formativo de grado
-					superior en desarrollo de aplicaciones multiplataforma
-					(DAM). Tengo conocimientos de HTML, CSS, JavaScript, Java, Astro, TailwindCSS, SQL...
-				</p>
-				<div class="flex flex-col sm:flex-row w-full max-2xl:justify-center gap-4">
-					<a
-						href="/Certificados/Curriculum_nicolas_bernal_bermudez.pdf"
-						target="_blank"
-						class="bg-transparent hover:bg-black px-6 py-2 text-[15px] rounded-[1.5rem] border-[1px] border-white/10 font-bold fondoGuapoHeader transition-all duration-300"
-					>
-						Descargar CV
-						<i class="fa-solid fa-download"></i>
-					</a>
-					<a
-						href="mailto:nicolasbernalbermudez@gmail.com"
-						target="_blank"
-						class="bg-transparent hover:bg-black px-6 py-2 text-[15px] rounded-[1.5rem] border-[1px] border-white/10 font-bold fondoGuapoHeader transition-all duration-300"
-					>
-						Contacto
-						<i class="fa-solid fa-envelope"></i>
-					</a>
-				</div>
-			</div>
-			<div
-				class="flex justify-center 2xl:justify-end items-center w-full 2xl:w-[30%]"
-			>
-				<img
-					src={nico.src}
-					alt="Nicolás Adrían Bernal Bermúdez"
-					class="w-[250px] scale-100 2xl:scale-115 2xl:w-[300px] h-[250px] 2xl:h-[300px] rounded-full object-cover mt-20 shadow-2xl shadow-[#000] hover:shadow-[#68641e8a] transition-all duration-300"
-				/>
-			</div>
-		</div>
-	</header>
+  <header
+    class="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a] text-white px-6 py-20"
+    id="home"
+  >
+    <div
+      class="max-w-7xl mx-auto flex flex-col-reverse 2xl:flex-row items-center justify-between gap-12 w-full"
+    >
+      <div
+        class="flex flex-col items-center 2xl:items-start text-center 2xl:text-left space-y-6 max-w-3xl"
+      >
+        <h1
+          class="text-4xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400"
+        >
+          ¡Hola! Soy <span class="text-blue-400">Nicolás Bernal</span>
+        </h1>
 
-	<main>
-		<Proyects />
-		<Skills />
-		<Certificates />
-	</main>
+        <div class="space-y-4">
+          <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+            Especializado en crear soluciones robustas tanto en el <span
+              class="text-blue-300">Frontend</span
+            > como en el <span class="text-emerald-300">Backend</span>.
+          </p>
+
+          <p class="text-base md:text-lg text-gray-400 max-w-2xl">
+            Experiencia con Java, Spring, JavaScript, Node.js, SQL, Astro,
+            Tailwind CSS, entre otros. Enfocado en escribir código limpio y
+            orientado a la mejor experiencia de usuario.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center 2xl:justify-start gap-4 pt-4">
+          <a
+            href="/Certificados/Curriculum_nicolas_bernal_bermudez.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center gap-2 bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-blue-400 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+          >
+            Descargar CV
+            <i class="fa-solid fa-download group-hover:bounce"></i>
+          </a>
+
+          <a
+            href="mailto:nicolasbernalbermudez@gmail.com"
+            class="flex items-center gap-2 bg-transparent border border-white/20 px-8 py-3 rounded-full font-bold hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1"
+          >
+            Contacto
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"
+        >
+        </div>
+
+        <Image
+          src="/foto.jpeg"
+          alt="Retrato de Nicolás Adrián Bernal Bermúdez"
+          width={400}
+          height={400}
+          loading="eager"
+          class="relative w-64 h-64 md:w-80 md:h-80 2xl:w-[400px] 2xl:h-[400px] rounded-full object-cover border-2 border-white/10 grayscale-[20%] hover:grayscale-0 transition-all duration-500 shadow-2xl"
+        />
+      </div>
+    </div>
+  </header>
+
+  <main class="bg-[#0a0a0a]" id="projects">
+    <section class="w-full">
+      <Projects />
+    </section>
+
+    <section class="w-full bg-white/3" id="skills">
+      <Skills />
+    </section>
+
+    <section class="w-full" id="certificates">
+      <Certificates />
+    </section>
+  </main>
 </Layout>
+
+<style>
+  /* Animación sutil para el fondo si decides usar fondoGuapoHeader */
+  .fondoGuapoHeader {
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+</style>

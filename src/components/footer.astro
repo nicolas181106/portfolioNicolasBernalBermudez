@@ -1,47 +1,91 @@
+---
+const footerLinks = [
+    { name: "Home", href: "#home" },
+    { name: "Proyectos", href: "#projects" },
+    { name: "Habilidades", href: "#skills" },
+    { name: "Certificados", href: "#certificates" },
+];
+
+const socials = [
+    {
+        icon: "fa-linkedin",
+        href: "https://www.linkedin.com/in/nicol%C3%A1s-adri%C3%A1n-bernal-berm%C3%BAdez-666a35282/",
+        label: "LinkedIn",
+    },
+    {
+        icon: "fa-github",
+        href: "https://github.com/nicolas181106",
+        label: "GitHub",
+    }
+];
+
+const currentYear = new Date().getFullYear();
+---
+
 <footer
-    class="bg-neutral-900 flex flex-col items-center gap-[1rem] text-center text-white border-t border-neutral-700 pt-[2rem] pb-[5rem]"
+    class="relative bg-neutral-950 border-t border-white/5 pt-16 pb-8 overflow-hidden"
 >
-    <div>
-        <a class="text-white mt-0 mr-[15px] hover:text-neutral-500 font-bold" href="#home">Home</a>
-        <a class="text-white mt-0 mr-[15px] hover:text-neutral-500 font-bold" href="#section-skill">Habilidades</a>
-        <a class="text-white mt-0 mr-[15px] hover:text-neutral-500 font-bold" href="#section-proyect">Proyectos</a>
-        <a class="text-white mt-0 mr-[15px] hover:text-neutral-500 font-bold" href="#section-certificates">Certificados</a>
+    <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
+    >
     </div>
 
-    <div class="flex gap-[1rem]">
-        <a
-            href="https://www.linkedin.com/in/nicol%C3%A1s-adri%C3%A1n-bernal-berm%C3%BAdez-666a35282/"
-            target="_blank"
-        >
-            <button class="hover:cursor-pointer hover:bg-black animacionHover bg-transparent border-[1px] border-white text-white p-[15px] text-[18px] rounded-[50%] transition-all duration-300 ease-in-out w-[45px] h-[45px] flex justify-center items-center">
-                <i class="fa-brands fa-linkedin"></i>
-            </button>
-        </a>
+    <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-8">
+        <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+            {
+                footerLinks.map((link) => (
+                    <a
+                        href={link.href}
+                        class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-300"
+                    >
+                        {link.name}
+                    </a>
+                ))
+            }
+        </nav>
 
-        <a
-            href="https://github.com/nicolas181106"
-            target="_blank"
-        >
-            <button class="hover:cursor-pointer hover:bg-black animacionHover bg-transparent border-[1px] border-white text-white p-[15px] text-[18px] rounded-[50%] transition-all duration-300 ease-in-out w-[45px] h-[45px] flex justify-center items-center">
-                <i class="fa-brands fa-github"></i>
-            </button>
-        </a>
+        <div class="flex gap-4">
+            {
+                socials.map((social) => (
+                    <a
+                        href={social.href}
+                        target="_blank"
+                        aria-label={social.label}
+                        class="group flex justify-center items-center w-11 h-11 border border-white/10 rounded-full text-gray-400 hover:border-blue-500/50 hover:text-white hover:bg-white/5 transition-all duration-300"
+                    >
+                        <i
+                            class={`fa-brands ${social.icon} text-lg group-hover:scale-110 transition-transform`}
+                        />
+                    </a>
+                ))
+            }
 
-        <a
-            href="mailto:nicolasbernalbermudez@gmail.com"
-            target="_blank"
-        >
-            <button class="hover:cursor-pointer hover:bg-black animacionHover bg-transparent border-[1px] border-white text-white p-[15px] text-[18px] rounded-[50%] transition-all duration-300 ease-in-out w-[45px] h-[45px] flex justify-center items-center">
-                <i class="fa-solid fa-envelope"></i>
-            </button>
-        </a>
-    </div>
+            <a
+                href="mailto:nicolasbernalbermudez@gmail.com"
+                target="_blank"
+                aria-label="Email"
+                class="group flex justify-center items-center w-11 h-11 border border-white/10 rounded-full text-gray-400 hover:border-blue-500/50 hover:text-white hover:bg-white/5 transition-all duration-300"
+            >
+                <i class="fa-solid fa-envelope text-lg group-hover:scale-110 transition-transform hidden"></i>
+            </a>
+        </div>
 
-    <div>
-        <p class="text-[18px] text-neutral-400">
-            Correo: <a href="mailto:nicolasbernalbermudez@gmail.com" class="text-white hover:text-neutral-500 font-bold"
-                >nicolasbernalbermudez@gmail.com</a>
-        </p>
-        <p class="text-[18px] text-neutral-400">2025 Nicolás Adrián Bernal Bermúdez</p>
+        <div class="text-center space-y-2">
+            <p class="text-sm text-gray-500">
+                ¿Tienes un proyecto en mente?
+                <a
+                    href="mailto:nicolasbernalbermudez@gmail.com"
+                    class="text-blue-400 hover:text-blue-300 font-medium ml-1 transition-colors"
+                >
+                    Hablemos
+                </a>
+            </p>
+            <div class="pt-8 border-t border-white/5 w-64 mx-auto"></div>
+            <p
+                class="text-[12px] uppercase tracking-[0.2em] text-gray-600 font-bold"
+            >
+                &copy; {currentYear} Nicolás Adrián Bernal Bermúdez
+            </p>
+        </div>
     </div>
 </footer>

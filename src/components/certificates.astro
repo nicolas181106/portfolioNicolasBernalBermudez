@@ -5,71 +5,123 @@ import jsbasic from "../assets/Img/Certificados/jsbasic.png";
 import vsc from "../assets/Img/Certificados/vsc.png";
 import javadesde0 from "../assets/Img/Certificados/javadesde0.png";
 import tailwindcss from "../assets/Img/Certificados/tailwindcss.png";
+import angular from "../assets/Img/Certificados/angular.png";
+import { Image } from "astro:assets";
 
 const certificates = [
-    {
-        name: "HTML5 y CSS3",
-        logo: html5,
-        url: "Certificados/certificado_curso_de_html5_y_css3.pdf",
-    },
-    {
-        name: "Maquetación web con CSS",
-        logo: cssmaquetado,
-        url: "Certificados/certificado_curso_de_maquetación_web_con_css.pdf",
-    },
-    {
-        name: "Fundamentos de JavaScript",
-        logo: jsbasic,
-        url: "Certificados/certificado_fundamentos_de_javascript.pdf",
-    },
-    {
-        name: "Visual Studio Code",
-        logo: vsc,
-        url: "Certificados/certificado_aumenta_tu_productividad_con_visual_studio_code.pdf",
-    },
-    {
-        name: "Java desde 0",
-        logo: javadesde0,
-        url: "Certificados/certificado_java_desde_0__introducción.pdf",
-    },
-    {
-        name: "TailwindCSS",
-        logo: tailwindcss,
-        url: "Certificados/certificado_tailwind_css.pdf",
-    },
+  {
+    name: "HTML5 y CSS3",
+    logo: html5,
+    url: "Certificados/certificado_curso_de_html5_y_css3.pdf",
+    issuer: "OpenWebinars",
+  },
+  {
+    name: "Maquetación web con CSS",
+    logo: cssmaquetado,
+    url: "Certificados/certificado_curso_de_maquetación_web_con_css.pdf",
+    issuer: "OpenWebinars",
+  },
+  {
+    name: "Fundamentos de JavaScript",
+    logo: jsbasic,
+    url: "Certificados/certificado_fundamentos_de_javascript.pdf",
+    issuer: "OpenWebinars",
+  },
+  {
+    name: "Visual Studio Code",
+    logo: vsc,
+    url: "Certificados/certificado_aumenta_tu_productividad_con_visual_studio_code.pdf",
+    issuer: "OpenWebinars",
+  },
+  {
+    name: "Java desde 0",
+    logo: javadesde0,
+    url: "Certificados/certificado_java_desde_0__introducción.pdf",
+    issuer: "OpenWebinars",
+  },
+  {
+    name: "TailwindCSS",
+    logo: tailwindcss,
+    url: "Certificados/certificado_tailwind_css.pdf",
+    issuer: "OpenWebinars",
+  },
+  {
+    name: "Fundamentos de Angular",
+    logo: angular,
+    url: "Certificados/certificado_fundamentos_de_angular.pdf",
+    issuer: "OpenWebinars",
+  },
 ];
 ---
 
-<section
-    class="flex justify-center items-center p-[2rem] md:p-[4rem] min-h-screen py-20 md:py-0 bg-neutral-900/20"
-    id="section-certificates"
->
-    <div class="fadeIn">
-        <h1 class="text-[40px] text-white text-center">Certificados</h1>
-        <div
-            class="flex flex-nowrap sm:flex-wrap md:flex-row justify-normal sm:justify-center items-center gap-0 sm:gap-[1.5rem] mt-[2rem] mx-0 sm:mx-[4rem] max-w-screen sm:max-w-[1500px] overflow-scroll sm:overflow-visible"
-        >
-            {
-                certificates.map((certificates) => (
-                    <article
-                        class="bg-neutral-900 hover:bg-black border-[0.5px] border-white/10 p-[1rem] my-[1.5rem] sm:my-0 mx-[1.5rem] sm:mx-0 max-sm:flex-grow max-sm:flex-shrink-0 max-sm:basis-auto rounded-[10px] text-center transition-all duration-300 hover:scale-105 w-[280px] md:w-[265px]"
-                    >
-                        <a
-                            href={certificates.url}
-                            target="_blank"
-                        >
-                            <img
-                                src={certificates.logo.src}
-                                alt={certificates.name}
-                                class="w-full rounded-[5px]"
-                            />
-                        </a>
-                        <p class="text-white text-[18px] font-bold mt-[10px]">
-                            {certificates.name}
-                        </p>
-                    </article>
-                ))
-            }
-        </div>
+<section class="py-24 w-full">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header -->
+    <div class="flex flex-col items-center mb-16 gap-3">
+      <span class="text-xs font-mono uppercase tracking-[0.3em] text-purple-400/70 border border-purple-500/20 px-4 py-1 rounded-full bg-purple-500/5">
+        Formación
+      </span>
+      <h2 class="text-4xl md:text-5xl font-bold text-white text-center">
+        Certificaciones
+      </h2>
+      <p class="text-gray-500 text-sm max-w-md text-center">
+        Cursos y certificados obtenidos a lo largo de mi formación técnica.
+      </p>
     </div>
+
+
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      {
+        certificates.map((cert, i) => (
+          <a
+            href={cert.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative bg-neutral-900 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-blue-500/40 flex flex-col"
+          >
+            <!-- Index badge -->
+            <span class="absolute top-3 left-3 z-10 w-6 h-6 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-[10px] font-mono text-white/40 group-hover:text-white/70 transition-colors">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+
+            <!-- Credential icon (top right) -->
+            <span class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 text-white/60" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </span>
+
+            <!-- Image -->
+            <div class="relative overflow-hidden aspect-[4/3] bg-black/20">
+              <Image
+                src={cert.logo}
+                alt={cert.name}
+                class="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+
+            <!-- Content -->
+            <div class="p-4 flex flex-col gap-2 flex-grow">
+              <p class="text-white font-semibold text-sm leading-tight group-hover:text-white transition-colors">
+                {cert.name}
+              </p>
+              <div class="flex items-center justify-between mt-auto pt-2 border-t border-white/5">
+                <span class="text-[10px] font-medium px-2 py-0.5 rounded-full border text-blue-300 bg-blue-500/10 border-blue-500/20">
+                  {cert.issuer}
+                </span>
+                <span class="text-[10px] text-gray-600 group-hover:text-gray-400 transition-colors uppercase tracking-widest font-mono">
+                  Ver →
+                </span>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
 </section>
