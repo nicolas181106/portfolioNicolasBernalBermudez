@@ -3,28 +3,29 @@ import { Image } from "astro:assets";
 import proyecto1 from "../assets/Img/Proyectos/TocadosAyaSevilla.png";
 import proyecto2 from "../assets/Img/Proyectos/AgathaGatosPersa.png";
 import proyecto3 from "../assets/Img/Proyectos/UtilWeb.png";
+import proyecto4 from "../assets/Img/Proyectos/UtilWeb.png";
 
 const projects = [
   {
-    name: "Tocados Aya Sevilla",
-    img: proyecto1,
-    url: "https://tocadosayasevilla.netlify.app/",
+    name: "Agenex",
+    img: proyecto4,
+    url: "",
     description:
-      "E-commerce elegante para la venta de tocados artesanales, optimizado para conversión y experiencia de usuario.",
-    year: 2025,
-    github: "https://github.com/nicolas181106/tocadosAyaSevilla",
-    tags: ["Astro", "TailwindCSS", "JavaScript"],
-    accent: "from-violet-500/20 to-fuchsia-500/5",
-    accentBorder: "hover:border-violet-500/50",
-    accentTag: "text-violet-300 bg-violet-500/10 border-violet-500/20",
-    accentYear: "text-violet-400",
+      "Boilerplate corporativo desarrollado en equipo para proyectos empresariales seguros. Proporciona una arquitectura lista para producción con autenticación, roles y auditoría.",
+    year: 2026,
+    github: "https://github.com/nicolas181106/agenex.git",
+    tags: ["Next.js", "TailwindCSS", "TypeScript", "PostgreSQL", "FastAPI"],
+    accent: "from-red-500/20 to-red-500/5",
+    accentBorder: "hover:border-red-500/50",
+    accentTag: "text-red-300 bg-red-500/10 border-red-500/20",
+    accentYear: "text-red-400",
   },
   {
     name: "Ágatha Gatos Persa",
     img: proyecto2,
     url: "https://agathagatospersas.es/",
     description:
-      "Sitio web especializado en la cría y cuidado de gatos persas con galería integrada y diseño cálido.",
+      "Sitio web especializado en la cría y cuidado de gatos persas. Cuenta con una galería multimedia optimizada, secciones informativas y un diseño cálido totalmente responsivo.",
     year: 2025,
     github: "https://github.com/nicolas181106/aghataGatosPersa",
     tags: ["Astro", "TailwindCSS", "JavaScript"],
@@ -34,11 +35,25 @@ const projects = [
     accentYear: "text-amber-400",
   },
   {
+    name: "Tocados Aya Sevilla",
+    img: proyecto1,
+    url: "https://tocadosayasevilla.netlify.app/",
+    description:
+      "E-commerce elegante para la venta de tocados artesanales. Incluye catálogo dinámico y una experiencia de usuario optimizada para conversión.",
+    year: 2025,
+    github: "https://github.com/nicolas181106/tocadosAyaSevilla",
+    tags: ["Astro", "TailwindCSS", "JavaScript"],
+    accent: "from-violet-500/20 to-fuchsia-500/5",
+    accentBorder: "hover:border-violet-500/50",
+    accentTag: "text-violet-300 bg-violet-500/10 border-violet-500/20",
+    accentYear: "text-violet-400",
+  },
+  {
     name: "Útil Web",
     img: proyecto3,
     url: "https://utilweb.netlify.app/",
     description:
-      "Dashboard de herramientas web útiles: clima, conversores y utilidades diarias en una sola app.",
+      "Dashboard de herramientas web centralizadas. Integra utilidades cotidianas como consulta del clima en tiempo real, conversores de unidades y herramientas de productividad.",
     year: 2025,
     github: "https://github.com/nicolas181106/tiempoWeb.git",
     tags: ["Astro", "TailwindCSS", "JavaScript"],
@@ -46,7 +61,7 @@ const projects = [
     accentBorder: "hover:border-cyan-500/50",
     accentTag: "text-cyan-300 bg-cyan-500/10 border-cyan-500/20",
     accentYear: "text-cyan-400",
-  },
+  }
 ];
 ---
 
@@ -114,6 +129,7 @@ const projects = [
                   <i class="fa-brands fa-github text-lg group-hover/gh:scale-110 transition-transform" />
                   <span>Código</span>
                 </a>
+                {project.url ? (
                 <a
                   href={project.url}
                   target="_blank"
@@ -122,7 +138,11 @@ const projects = [
                 >
                   Live demo
                   <i class="fa-solid fa-arrow-up-right-from-square text-xs" />
-                </a>
+                </a> ) : (
+                  <span class="text-gray-500 text-sm">
+                    En Producción...
+                  </span>
+                )}
               </div>
             </div>
           </article>
